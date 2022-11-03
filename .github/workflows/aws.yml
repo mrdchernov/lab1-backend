@@ -33,11 +33,11 @@ on:
 env:
   AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: repository_2           # set this to your Amazon ECR repository name
-  ECS_SERVICE: custom-service                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: default                 # set this to your Amazon ECS cluster name
+  ECS_SERVICE: lab1-container-service                 # set this to your Amazon ECS service name
+  ECS_CLUSTER: cluster-lab1                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: first-run-task-definition # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: lab1_back           # set this to the name of the container in the
+  CONTAINER_NAME: lab1-container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:
