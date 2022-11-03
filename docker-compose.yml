@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:14
+    restart: always
+    container_name: dogs_db
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+    env_file:
+      - .env
+
+  app:
+    build: .
+    restart: always
+    env_file:
+      - .env
