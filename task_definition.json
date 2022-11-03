@@ -4,7 +4,12 @@
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
-      "environmentFiles": null,
+      "environmentFiles": [
+        {
+          "value": "arn:aws:s3:::settings-lab1/.env",
+          "type": "s3"
+        }
+      ],
       "logConfiguration": {
         "logDriver": "awslogs",
         "secretOptions": null,
@@ -37,7 +42,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "245237400900.dkr.ecr.us-east-1.amazonaws.com/repository_2:cc51f937c4002f614b9560f7aec59ecc7c8845ab",
+      "image": "245237400900.dkr.ecr.us-east-1.amazonaws.com/repository_2:3bacb0cbe40d783806d396bc3f2bb7ac553a7088",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -64,7 +69,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:245237400900:task-definition/first-run-task-definition-rev2:1",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:245237400900:task-definition/first-run-task-definition-rev2:3",
   "family": "first-run-task-definition-rev2",
   "requiresAttributes": [
     {
@@ -90,6 +95,12 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.env-files.s3"
     },
     {
       "targetId": null,
@@ -123,7 +134,7 @@
   "networkMode": "awsvpc",
   "runtimePlatform": null,
   "cpu": "256",
-  "revision": 1,
+  "revision": 3,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
