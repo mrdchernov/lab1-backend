@@ -37,7 +37,7 @@
       "memoryReservation": 512,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "245237400900.dkr.ecr.us-east-1.amazonaws.com/repository_2/lab1_back:latest",
+      "image": "245237400900.dkr.ecr.us-east-1.amazonaws.com/repository_2:cc51f937c4002f614b9560f7aec59ecc7c8845ab",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -45,7 +45,7 @@
       "interactive": null,
       "healthCheck": null,
       "essential": true,
-      "links": [],
+      "links": null,
       "hostname": null,
       "extraHosts": null,
       "pseudoTerminal": null,
@@ -64,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:245237400900:task-definition/first-run-task-definition:1",
-  "family": "first-run-task-definition",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:245237400900:task-definition/first-run-task-definition-rev2:1",
+  "family": "first-run-task-definition-rev2",
   "requiresAttributes": [
     {
       "targetId": null,
