@@ -12,6 +12,18 @@ const dogDTOSchema = yup.object().shape({
     noise: yup.number().integer().required(),
 });
 
+const findDogDTOSchema = yup.object().shape({
+    experience_required: yup.number().integer(),
+    walk_distance: yup.number().integer(),
+    dog_size: yup.number().integer(),
+    grooming_time: yup.number().integer(),
+    guard: yup.number().integer(),
+    drools: yup.number().integer(),
+    allergy: yup.number().integer(),
+    noise: yup.number().integer(),
+});
+
 module.exports = {
-    dogDTOSchema
+    dogDTOSchema,
+    findDogDTOSchema
 };
