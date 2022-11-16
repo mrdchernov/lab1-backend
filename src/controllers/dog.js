@@ -21,7 +21,7 @@ async function handleFindDog(req, res) {
     const searchCondition = req.body;
     try {
         const searchSchema = await findDogDTOSchema.validate(searchCondition, { abortEarly: false });
-
+        delete searchSchema.breed_name;
 
         const allDogs = await models.dogs.findAll();
         let amountOfParams = 0;
