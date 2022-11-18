@@ -3,7 +3,7 @@ const cors = require('cors');
 const dogsRouter = require('./router/dogs');
 const config = require('./config');
 const bodyParser = require('body-parser')
-
+const {proxy} = require('./controllers/proxy')
 const JsonParser = bodyParser.json();
 
 process.on('unhandledRejection', (err) => {
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     console.log(`${new Date().toISOString()}: url - ${req.url} method = ${req.method}`)
     next();
 });
-
+app.use('/api/proxy', proxy());
 app.use('/api/dog', dogsRouter);
 
 app.listen(config.port, () => {

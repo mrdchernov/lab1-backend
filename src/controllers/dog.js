@@ -34,7 +34,6 @@ async function handleFindDog(req, res) {
             // start with 0 matches
             let matches = 0;
 
-            // add dog if it fits in more than 66% of params
             for (const search in searchSchema) {
                 if (searchSchema[search] === 0 || dog[search] === searchSchema[search]) {
                     matches++;
